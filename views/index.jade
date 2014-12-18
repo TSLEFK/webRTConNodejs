@@ -1,0 +1,63 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    script(src="./javascript/jquery-1.11.1.js" , rel="text/javascript")
+    script(src="./javascript/jquery.cookie.js" , rel="text/javascript")
+    script(src="./javascript/index.js" , rel="text/javascript")
+  body(onload="init()")
+    #container
+      #user_id
+      #videos
+        video#you.flip.one_video(autoplay)
+        video#me.flip.one_video(autoplay)
+      #dial
+        form.dial_form
+          table#dial_table
+            tbody
+              tr
+                td
+                   input.dial_btn(type="button" value="1" onclick="dial(this.value)")
+                td
+                   input.dial_btn(type="button" value="2" onclick="dial(this.value)")
+                td
+                   input.dial_btn(type="button" value="3" onclick="dial(this.value)")
+              tr
+                td
+                   input.dial_btn(type="button" value="4" onclick="dial(this.value)")
+                td
+                   input.dial_btn(type="button" value="5" onclick="dial(this.value)")
+                td
+                   input.dial_btn(type="button" value="6" onclick="dial(this.value)")
+              tr
+                td
+                   input.dial_btn(type="button" value="7" onclick="dial(this.value)")
+                td
+                   input.dial_btn(type="button" value="8" onclick="dial(this.value)")
+                td
+                   input.dial_btn(type="button" value="9" onclick="dial(this.value)")
+              tr
+                td
+                   input.dial_btn#delete(type="button" value="←") 
+                td
+                   input.dial_btn(type="button" value="0" onclick="dial(this.value)")
+                td
+                   input.dial_btn#clear(type="button" value="clear")
+              tr
+                td(colspan="3")
+                  .number_call(style="text-align:center")
+                    input#number(type="text" size="15")
+                    input#call.call_btn(type="button" value="発信")
+                    input#disconnect.call_btn(type="button" value="切断")
+            //tbody
+          //table
+        //form
+      #welcome
+        p welcome to #{title}
+      #cookie.buttonBox
+        input(type="button" value="cookie reset" onclick="delCookie()")
+      #link
+        a(href="./test") testページ
+      #select_videos
+        span#switch_me 自分のカメラON
+    script(src="./javascript/script.js")

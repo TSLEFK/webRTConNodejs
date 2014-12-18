@@ -1,0 +1,200 @@
+@charset "utf8";
+
+*{
+        line-height: 14px;
+        font: 14px "Lucida Granade", Helvetica, Arial, sans-self;;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 375px;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font: 14px "Lucida Granade", Helvetica, Arial, sans-self;
+  background: -moz-linear-gradient(top, rgba(238,238,238,1) 0%, rgba(238,238,238,0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(238,238,238,0)));
+  background: -webkit-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(238,238,238,0) 100%);
+  background: -o-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(238,238,238,0) 100%);
+  background: -ms-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(238,238,238,0) 100%);
+  background: linear-gradient(to bottom, rgba(238,238,238,1) 0%,rgba(238,238,238,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#00eeeeee',GradientType=0 );
+}
+
+#container{
+  text-align: center;
+  margin: 0 auto;
+  width: 320px;
+  display: flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;/*safari*/
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+}
+
+/*
+ * 動画表示部分
+ */
+
+#videos {
+  width: 320px;
+  margin: 0 auto;
+  order: 6;
+  -webkit-order: 6;
+}
+
+#you , #me{
+  width: 318px;
+  height: 300px;
+  position: relative;
+  bottom: 0px;
+  border: dashed 1px;
+  visibility: hidden;
+}
+
+#you{
+}
+
+#me{
+  display: none;
+}
+
+.flip {
+}
+
+/*
+ * 数字ダイアル部分
+ */
+
+#dial{
+  width: 320px;
+  order: 9;
+  -webkit-order: 9;
+}
+
+.dial_form{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+#dial_table{
+  border: solid 1px;
+}
+
+.dial_form td{
+  border: solid 1px;
+  width: 100px;
+}
+
+.dial_btn {
+    height: 70px;
+    width: 100%;
+    font-size: 6ex;
+    border-style: none;
+}
+
+
+#number{
+  font-size: 27px;
+}
+
+#clear{
+  font-size: 30px;
+}
+
+#call{
+	
+}
+
+#disconnect{
+	
+}
+
+.call_btn {
+    height: 50px;
+    width: 270px;
+    font-size: 4ex;
+    border-style: none;
+    background-color: #4169E1;
+    color: #fff;
+    margin: 10px 0;
+}
+
+/*
+ *メニュー部分
+ */
+
+#welcome{
+  width: 320px;
+  order: 1;
+  -webkit-order: 1;
+}
+
+.buttonBox {
+  z-index: 1;
+}
+
+#cookie{
+  width: 320px;
+  order: 2;
+  -webkit-order: 2;
+}
+
+#link{
+  width: 160px;
+  order: 5;
+  -webkit-order: 5;
+}
+
+#select_videos{
+  width: 160px;
+  order: 4;
+  -webkit-order: 4;
+}
+
+/*  未使用
+.button {
+  -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  box-shadow:inset 0px 1px 0px 0px #ffffff;
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+  background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+  background-color:#ededed;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  border:1px solid #dcdcdc;
+  display:inline-block;
+  color:#777777;
+  font-family:arial;
+  font-size:15px;
+  font-weight:bold;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:1px 1px 0px #ffffff;
+}
+
+
+.button:hover {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+  background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+  background-color:#dfdfdf;
+}
+
+.button:active {
+  position:relative;
+  top:1px;
+}
+*/
