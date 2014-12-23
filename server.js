@@ -18,8 +18,7 @@ server.listen(port);
 
 console.log("Server is listening on port " + port);
 
-/*
- *
+
 //var user_numbers = 1000;
 var userList={}; // {num : socket }
 
@@ -51,7 +50,7 @@ webRTC.rtc.on('call',function(data,socket){
 
 webRTC.rtc.on('create_userId',function(data,socket){
   var num = 1001;
-  /* cookieで使用されいている番号に入らないように *
+  /* cookieで使用されいている番号に入らないように */
   for(key in userList){
     console.log(key);
     if(key == num)
@@ -84,7 +83,7 @@ webRTC.rtc.on("update_userId",function(data,socket){
 });
 
 webRTC.rtc.on('close',function(data,socket){
-  /* rootpathにリダイレクトすることで切れる*
+  /* rootpathにリダイレクトすることで切れる*/
   var roomList = webRTC.rtc.rooms[data.room] || [];
   for (var i = 0; i < roomList.length; i++) {
     var socketId = roomList[i];
@@ -101,4 +100,3 @@ webRTC.rtc.on('close',function(data,socket){
     }
   }
 });
-*/

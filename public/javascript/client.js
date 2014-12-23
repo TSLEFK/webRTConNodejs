@@ -72,8 +72,7 @@
       removeVideo(data);
     });
     
-    
-    initNewRoom();
+    //initNewRoom();
     initUserId();
     initTel();
   }
@@ -195,10 +194,8 @@
   
   
   function initNewRoom() {
-    var button = document.getElementById("newRoom");
-  
-    button.addEventListener('click', function(event) {
-  
+        
+    $("#newRoom").click(  function(event) {
       var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
       var string_length = 8;
       var randomstring = '';
@@ -209,7 +206,7 @@
   
       window.location.hash = randomstring;
       location.reload();
-    })
+    });
   }
   
   
