@@ -72,7 +72,7 @@
       removeVideo(data);
     });
     
-    //initNewRoom();
+    initNewRoom();
     initUserId();
     initTel();
   }
@@ -207,7 +207,7 @@
       window.location.hash = randomstring;
       location.reload();
     });
-  }
+  }	//end initNewRoom()
   
   
   //console.log("test:-> ");
