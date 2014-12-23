@@ -18,8 +18,6 @@ server.listen(port);
 
 console.log("Server is listening on port " + port);
 
-
-
 //var user_numbers = 1000;
 var userList={}; // {num : socket }
 
