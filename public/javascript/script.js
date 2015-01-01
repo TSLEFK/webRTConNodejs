@@ -233,7 +233,7 @@
       console.log('remove ' + data);
       removeVideo(data);
     });
-    //initNewRoom();
+    initNewRoom();
     initUserId();
     initTel();
   }

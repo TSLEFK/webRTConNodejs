@@ -6,12 +6,12 @@ html
     script(src="./javascript/jquery-1.11.1.js" , rel="text/javascript")
     script(src="./javascript/jquery.cookie.js" , rel="text/javascript")
     script(src="./javascript/index.js" , rel="text/javascript")
-    script(src="./javascript/webrtc.io.js" , rel="text/javascript")
+    script(src="./javascript/oldwebrtc.io.js" , rel="text/javascript")
   body(onload="init()")
     #container
       #user_id
       #videos
-        video#you.flip.one_video(autoplay)
+        video#you.flip.one_video(autoplay muted)
         video#me.flip.one_video(autoplay)
       #dial
         form.dial_form
@@ -58,9 +58,11 @@ html
         p welcome to #{title}
       #cookie.buttonBox
         input(type="button" value="cookie reset" onclick="delCookie()")
+      #newRoom
+        input(type="button" value="ランダムIDを作成")
       #link
         a(href="./test") testページ
       #select_videos
         span#switch_me 自分のカメラON
-    script(src="./javascript/client.js")
+    script(src="./javascript/script_tmp.js")
     //script(src="./javascript/script.js")

@@ -133,6 +133,14 @@ body {
 /*
  *メニュー部分
  */
+#user_id{
+  width: 320px;
+  text-align: center;
+}
+
+#mynumber{
+  font-size: 20px;
+}
 
 #welcome{
   width: 320px;
@@ -145,9 +153,15 @@ body {
 }
 
 #cookie{
-  width: 320px;
+  width: 160px;
   order: 2;
   -webkit-order: 2;
+}
+
+#newRoom{
+  width: 160px;
+  order: 3;
+  -webkit-order: 3;
 }
 
 #link{

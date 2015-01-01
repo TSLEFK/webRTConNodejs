@@ -23,13 +23,19 @@
 	},
 	//success
 	function(localMediaStream) {
-	        var yourvideo = document.getElementById("you");
-	        var myvideo  =  document.getElementById("me");
 	        //作成されたウィンドウ内の document と同じ寿命を持つ、新しいオブジェクトの URL を作成
+	        
+	        $("you").src(  window.webkitURL.createObjectURL(localMediaStream) );
+	  //      $("me").src(  window.webkitURL.createObjectURL(localMediaStream) );
+	        
+	        
+	    /*    var yourvideo = document.getElementById("you");
+	        var myvideo  =  document.getElementById("me");
 	        yourvideo.src = window.URL.createObjectURL( localMediaStream );
 	        myvideo.src = window.URL.createObjectURL( localMediaStream );
-	        yourvideo.play();
-	        myvideo.play();
+	   */
+	        $("you").play();
+	    //    $("me").play();
 	},
 	//err
 	function(e) {
@@ -61,12 +67,13 @@
     rtc.on ('add remote stream', function(stream, socketId) {        
       console.log("ADDING REMOTE STREAM...");
       var clone = cloneVideo('you', socketId);
+      
       //無名のクラスを追加する
       document.getElementById(clone.id).setAttribute("class", "");
       rtc.attachStream(stream, clone.id);
       subdivideVideos();
     });
-  
+    
     rtc.on('disconnect stream', function(data) {
       console.log('remove ' + data);
       removeVideo(data);
@@ -92,7 +99,7 @@
     //userIdをサーバからもらうように申請
     waitForConnection = function(){
       console.log("waiting...");
-      if(rtc._socket.readyState==1){        
+      if(rtc._socket.readyState==1){ 
         //user_idにcookieに保存された video_chat=XXXXをcookieからとりたい
         if((st = document.cookie.lastIndexOf("video_chat=")) != -1){
           user_id = $.cookie("video_chat");
@@ -124,8 +131,7 @@
       //そこで、applyメソッドを使ってargumentsをwindowに与える
       //arrayは、引数を一つのみ(->callメソッド参照)
       var receive = u_id.recv.apply(this,arguments);
-      
-      $("#user_id").text("あなたの番号は" + receive.userId + "です");
+      $("#user_id").html("あなたの番号は<span id='mynumber'>" + receive.userId + "</span>です");
       $.cookie("video_chat", receive.userId , { expires: 30}) ;
       window.location.href="/#" + receive.userId;
     }); 
@@ -158,6 +164,7 @@
       console.log("partner number:-> " + num);
     });
     
+    //serverから呼ばれる
     rtc.on( tell.event , function(){
       var receive = tell.recv.apply(this,arguments);
       setTimeout(function(){
@@ -192,9 +199,8 @@
     });
   }	//end initTell()
   
-  
+  //何をするためのもの？　
   function initNewRoom() {
-        
     $("#newRoom").click(  function(event) {
       var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
       var string_length = 8;
@@ -203,13 +209,12 @@
         var rnum = Math.floor(Math.random() * chars.length);
         randomstring += chars.substring(rnum, rnum + 1);
       }
-  
+      
+      $.cookie("video_chat", randomstring , { expires: 30}) ;
       window.location.hash = randomstring;
       location.reload();
     });
   }	//end initNewRoom()
-  
-  
   //console.log("test:-> ");
   
   

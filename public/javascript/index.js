@@ -19,6 +19,7 @@ $( function() {
 function delCookie(){
         cName = "video_chat"; //削除するクッキー名
         $.cookie( cName , ' ', { expires: -1} );
+        location.reload();
 }
 
 //自分のカメラも表示させるか
