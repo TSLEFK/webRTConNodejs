@@ -14,11 +14,7 @@ module.exports = function(app){
     res.render('index', {title: 'ExpTEST Hello!!'});
   });
   
-  /*テスト用*/ 
-  app.get('/test', function(req, res){ 
-    res.render('test', {test: 'TEST page XD'});
-  });
-  
+  /*テスト用　新たなページの追加に関して*/   
   app.get('/test.html',function(req, res){ 
     res.sendfile(__dirname+ '/test.html');
   });
