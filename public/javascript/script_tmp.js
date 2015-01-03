@@ -188,7 +188,8 @@
       setTimeout(function(){
         alert(receive.room + "さんから" + receive.str);
         window.location.href='/#' + receive.room;
-        callClone( receive.stream , receive.id);
+        //callClone( receive.stream , receive.id);
+      init();
         },2000);
     });
   
