@@ -15,6 +15,7 @@ on KINDAI univercity in Japan.
 ##start up
 	./run.sh
 or
+
 	node server
 
 ##access
