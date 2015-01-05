@@ -32,7 +32,7 @@
     var numInRow = 0;
     for(var i = 0, len = videos.length; i < len; i++) {
       var video = videos[i];
-      //setWH(video, i);
+      setWH(video, i);
       numInRow = (numInRow + 1) % perRow;
     }
   }
@@ -43,16 +43,15 @@
     var perColumn = Math.ceil(videos.length / perRow);
     var width = window.innerWidth;
     var height = window.innerHeight / 2;
-    //Math.floor((window.innerHeight - 190) / perColumn);
-    video.width = width;
-    video.height = height;
-    video.style.position = "absolute";
-    video.style.left = (i % perRow) * width + "px";
+    video.width = 320;//width;
+    video.height = 300;//height;
+    
+  /*  video.style.left = (i % perRow) * width + "px";
     video.style.top = "24px";
-    //Math.floor(i / perRow) * height + "px";
+    //Math.floor(i / perRow) * height + "px";*/
     video.style.visibility = "visible";
-    var dial = document.getElementById("dial");
-    dial.style.top = height;
+  /*  var dial = document.getElementById("dial");
+    dial.style.top = height;*/
   }
   
   //ビデオを表示させるタグを作る

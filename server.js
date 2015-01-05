@@ -94,6 +94,8 @@ webRTC.rtc.on('close',function(data,socket){
     var socketId = roomList[i];
     var soc = webRTC.rtc.getSocket(socketId);//socketが取得できる
 
+    console.log("close :" + soc);
+    
     if (soc) {
       soc.send(JSON.stringify({
         "eventName": "disconnect_tell"

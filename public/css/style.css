@@ -55,13 +55,12 @@ body {
 #you , #me{
   width: 318px;
   height: 300px;
-  position: relative;
-  bottom: 0px;
-  border: dashed 1px;
-  visibility: hidden;
+  /*visibility: hidden;*/
+  display: none;
 }
 
 #you{
+        
 }
 
 #me{
